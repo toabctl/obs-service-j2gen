@@ -1,0 +1,23 @@
+<service name="j2gen">
+  <summary>Run j2gen</summary>
+  <description>
+    This service runs j2gen to render a template together with multiple YAML data sources.
+  </description>
+  <parameter name="template">
+    <description>
+      Name of the template file. This should be a Jinja2 based template.
+    </description>
+  </parameter>
+  <parameter name="input">
+    <description>
+      Name of the input data file. Must be YAML format.
+      This parameter can be given multiple time. The order (last wins)
+      is important!
+    </description>
+  </parameter>
+  <parameter name="output">
+    <description>
+      Name of the output file.
+    </description>
+  </parameter>
+</service>
